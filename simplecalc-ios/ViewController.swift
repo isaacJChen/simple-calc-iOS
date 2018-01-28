@@ -35,6 +35,8 @@ class ViewController: UIViewController {
             return Int(calculation[0])! * Int(calculation[1])!
         } else if operation == "÷" {
             return Int(calculation[0])! / Int(calculation[1])!
+        } else if operation == "%" {
+            return Int(calculation[0])! % Int(calculation[1])!
         } else if operation == "cnt" {
             return calculation.count
         } else if operation == "avg" {
@@ -62,7 +64,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var minusBTN: UIButton!
     @IBOutlet weak var multiplyBTN: UIButton!
     @IBOutlet weak var divideBTN: UIButton!
-
+    @IBOutlet weak var modBTN: UIButton!
+    
     @IBOutlet weak var countBTN: UIButton!
     @IBOutlet weak var averageBTN: UIButton!
     @IBOutlet weak var factorialBTN: UIButton!
@@ -83,6 +86,7 @@ class ViewController: UIViewController {
         minusBTN.isEnabled = false
         multiplyBTN.isEnabled = false
         divideBTN.isEnabled = false
+        modBTN.isEnabled = false
         factorialBTN.isEnabled = false
         averageBTN.isEnabled = false
         equalsBTN.isEnabled = true
@@ -99,6 +103,7 @@ class ViewController: UIViewController {
         minusBTN.isEnabled = false
         multiplyBTN.isEnabled = false
         divideBTN.isEnabled = false
+        modBTN.isEnabled = false
         factorialBTN.isEnabled = false
         countBTN.isEnabled = false
         equalsBTN.isEnabled = true
@@ -115,6 +120,7 @@ class ViewController: UIViewController {
         minusBTN.isEnabled = false
         multiplyBTN.isEnabled = false
         divideBTN.isEnabled = false
+        modBTN.isEnabled = false
         factorialBTN.isEnabled = false
         averageBTN.isEnabled = false
         countBTN.isEnabled = false
@@ -131,6 +137,7 @@ class ViewController: UIViewController {
         minusBTN.isEnabled = false
         multiplyBTN.isEnabled = false
         divideBTN.isEnabled = false
+        modBTN.isEnabled = false
         equalsBTN.isEnabled = false
         factorialBTN.isEnabled = false
         averageBTN.isEnabled = false
@@ -156,6 +163,7 @@ class ViewController: UIViewController {
         minusBTN.isEnabled = true
         multiplyBTN.isEnabled = true
         divideBTN.isEnabled = true
+        modBTN.isEnabled = true
         countBTN.isEnabled = true
         averageBTN.isEnabled = true
         factorialBTN.isEnabled = true
@@ -171,6 +179,7 @@ class ViewController: UIViewController {
         minusBTN.isEnabled = false
         multiplyBTN.isEnabled = false
         divideBTN.isEnabled = false
+        modBTN.isEnabled = false
         factorialBTN.isEnabled = false
         averageBTN.isEnabled = false
         countBTN.isEnabled = false
@@ -186,6 +195,7 @@ class ViewController: UIViewController {
         minusBTN.isEnabled = false
         multiplyBTN.isEnabled = false
         divideBTN.isEnabled = false
+        modBTN.isEnabled = false
         factorialBTN.isEnabled = false
         averageBTN.isEnabled = false
         countBTN.isEnabled = false
@@ -201,6 +211,7 @@ class ViewController: UIViewController {
         minusBTN.isEnabled = false
         multiplyBTN.isEnabled = false
         divideBTN.isEnabled = false
+        modBTN.isEnabled = false
         factorialBTN.isEnabled = false
         averageBTN.isEnabled = false
         countBTN.isEnabled = false
@@ -216,6 +227,23 @@ class ViewController: UIViewController {
         minusBTN.isEnabled = false
         multiplyBTN.isEnabled = false
         divideBTN.isEnabled = false
+        modBTN.isEnabled = false
+        factorialBTN.isEnabled = false
+        averageBTN.isEnabled = false
+        countBTN.isEnabled = false
+    }
+    
+    @IBAction func mod(_ sender: Any) {
+        calculation.append(textHolder)
+        operation = "%"
+        textHolder = ""
+        lab.text = "\(lab.text ?? "something went wrong")%"
+        equalsBTN.isEnabled = false
+        plusBTN.isEnabled = false
+        minusBTN.isEnabled = false
+        multiplyBTN.isEnabled = false
+        divideBTN.isEnabled = false
+        modBTN.isEnabled = false
         factorialBTN.isEnabled = false
         averageBTN.isEnabled = false
         countBTN.isEnabled = false
@@ -229,6 +257,7 @@ class ViewController: UIViewController {
             minusBTN.isEnabled = true
             multiplyBTN.isEnabled = true
             divideBTN.isEnabled = true
+            modBTN.isEnabled = true
             factorialBTN.isEnabled = true
             averageBTN.isEnabled = true
             countBTN.isEnabled = true
@@ -245,6 +274,7 @@ class ViewController: UIViewController {
             minusBTN.isEnabled = true
             multiplyBTN.isEnabled = true
             divideBTN.isEnabled = true
+            modBTN.isEnabled = true
             factorialBTN.isEnabled = true
             averageBTN.isEnabled = true
             countBTN.isEnabled = true
@@ -260,6 +290,7 @@ class ViewController: UIViewController {
             minusBTN.isEnabled = true
             multiplyBTN.isEnabled = true
             divideBTN.isEnabled = true
+            modBTN.isEnabled = true
             factorialBTN.isEnabled = true
             averageBTN.isEnabled = true
             countBTN.isEnabled = true
@@ -275,6 +306,7 @@ class ViewController: UIViewController {
             minusBTN.isEnabled = true
             multiplyBTN.isEnabled = true
             divideBTN.isEnabled = true
+            modBTN.isEnabled = true
             factorialBTN.isEnabled = true
             averageBTN.isEnabled = true
             countBTN.isEnabled = true
@@ -290,6 +322,7 @@ class ViewController: UIViewController {
             minusBTN.isEnabled = true
             multiplyBTN.isEnabled = true
             divideBTN.isEnabled = true
+            modBTN.isEnabled = true
             factorialBTN.isEnabled = true
             averageBTN.isEnabled = true
             countBTN.isEnabled = true
@@ -305,6 +338,7 @@ class ViewController: UIViewController {
             minusBTN.isEnabled = true
             multiplyBTN.isEnabled = true
             divideBTN.isEnabled = true
+            modBTN.isEnabled = true
             factorialBTN.isEnabled = true
             averageBTN.isEnabled = true
             countBTN.isEnabled = true
@@ -320,6 +354,7 @@ class ViewController: UIViewController {
             minusBTN.isEnabled = true
             multiplyBTN.isEnabled = true
             divideBTN.isEnabled = true
+            modBTN.isEnabled = true
             factorialBTN.isEnabled = true
             averageBTN.isEnabled = true
             countBTN.isEnabled = true
@@ -335,6 +370,7 @@ class ViewController: UIViewController {
             minusBTN.isEnabled = true
             multiplyBTN.isEnabled = true
             divideBTN.isEnabled = true
+            modBTN.isEnabled = true
             factorialBTN.isEnabled = true
             averageBTN.isEnabled = true
             countBTN.isEnabled = true
@@ -350,6 +386,7 @@ class ViewController: UIViewController {
             minusBTN.isEnabled = true
             multiplyBTN.isEnabled = true
             divideBTN.isEnabled = true
+            modBTN.isEnabled = true
             factorialBTN.isEnabled = true
             averageBTN.isEnabled = true
             countBTN.isEnabled = true
@@ -365,6 +402,7 @@ class ViewController: UIViewController {
             minusBTN.isEnabled = true
             multiplyBTN.isEnabled = true
             divideBTN.isEnabled = true
+            modBTN.isEnabled = true
             factorialBTN.isEnabled = true
             averageBTN.isEnabled = true
             countBTN.isEnabled = true

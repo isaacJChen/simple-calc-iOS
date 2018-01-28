@@ -148,7 +148,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zab-WW-5lD">
-                                <rect key="frame" x="223" y="298" width="30" height="120"/>
+                                <rect key="frame" x="223" y="298" width="30" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALd-qG-rYe">
@@ -191,10 +191,20 @@
                                             <action selector="divide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NKe-Tw-4lb"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ue6-es-wco">
+                                        <rect key="frame" x="0.0" y="120" width="30" height="30"/>
+                                        <color key="backgroundColor" red="0.49544608159999998" green="0.49544608159999998" blue="0.49544608159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="%">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lhJ-je-4XL"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZJb-Nb-dPp">
-                                <rect key="frame" x="122" y="426" width="131" height="30"/>
+                                <rect key="frame" x="86" y="426" width="129" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.49544608159999998" green="0.49544608159999998" blue="0.49544608159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="=">
@@ -267,6 +277,7 @@
                         <outlet property="factorialBTN" destination="oFP-Cc-5uC" id="YtY-E6-r2X"/>
                         <outlet property="lab" destination="34N-V1-zT6" id="exe-jd-cmK"/>
                         <outlet property="minusBTN" destination="WJR-h4-ou3" id="aCp-NH-GVs"/>
+                        <outlet property="modBTN" destination="ue6-es-wco" id="RjU-cN-Yxl"/>
                         <outlet property="multiplyBTN" destination="Qcj-bc-OFD" id="1t3-yY-94C"/>
                         <outlet property="plusBTN" destination="ALd-qG-rYe" id="AgS-5P-Xry"/>
                         <outlet property="warning" destination="vQP-bf-zP6" id="GJc-aA-910"/>
