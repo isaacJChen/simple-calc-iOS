@@ -34,9 +34,9 @@ class ViewController: UIViewController {
         } else if operation == "x" {
             return Int(calculation[0])! * Int(calculation[1])!
         } else if operation == "÷" {
-            return Int(calculation[0])! / Int(calculation[1])!
+            return Int(calculation[1])! == 0 ? 0 : Int(calculation[0])! / Int(calculation[1])!
         } else if operation == "%" {
-            return Int(calculation[0])! % Int(calculation[1])!
+            return Int(calculation[1])! == 0 ? 0 : Int(calculation[0])! % Int(calculation[1])!
         } else if operation == "cnt" {
             return calculation.count
         } else if operation == "avg" {
