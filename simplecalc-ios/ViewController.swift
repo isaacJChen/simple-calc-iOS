@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var warning: UILabel!
     
+    var history:[String] = []
     
     var textHolder = ""
     var calculation:[String] = []
@@ -28,19 +29,35 @@ class ViewController: UIViewController {
         }
         
         if operation == "+" {
+            history.append("\(calculation[0]) + \(calculation[1]) = \(Int(calculation[0])! + Int(calculation[1])!)")
             return Int(calculation[0])! + Int(calculation[1])!
         } else if operation == "-" {
+            history.append("\(calculation[0]) - \(calculation[1]) = \(Int(calculation[0])! - Int(calculation[1])!)")
             return Int(calculation[0])! - Int(calculation[1])!
         } else if operation == "x" {
+            history.append("\(calculation[0]) x \(calculation[1]) = \(Int(calculation[0])! * Int(calculation[1])!)")
             return Int(calculation[0])! * Int(calculation[1])!
         } else if operation == "÷" {
+            history.append("\(calculation[0]) ÷ \(calculation[1]) = \(Int(calculation[0])! / Int(calculation[1])!)")
             return Int(calculation[1])! == 0 ? 0 : Int(calculation[0])! / Int(calculation[1])!
         } else if operation == "%" {
+            history.append("\(calculation[0]) % \(calculation[1]) = \(Int(calculation[0])! % Int(calculation[1])!)")
             return Int(calculation[1])! == 0 ? 0 : Int(calculation[0])! % Int(calculation[1])!
         } else if operation == "cnt" {
+            var s:String = ""
+            calculation.forEach{ (elem) in
+                s = "\(s) \(elem)cnt "
+                }
+            history.append("\(s)= \(calculation.count)")
             return calculation.count
         } else if operation == "avg" {
-            return calculation.reduce(0, {$0 + Int($1)!})/calculation.count
+            var s:String = ""
+            calculation.forEach{ (elem) in
+                s = "\(s) \(elem)avg "
+            }
+            let result = calculation.reduce(0, {$0 + Int($1)!})/calculation.count
+            history.append("\(s)= \(result)")
+            return result
         } else if operation == "fac" {
             if Int(calculation[0])! <= 20 && Int(calculation[0])! >= 0 {
                 let num = Int(calculation[0])!
@@ -52,6 +69,7 @@ class ViewController: UIViewController {
                     returnedValue *= n
                 }
                 
+                history.append("\(calculation[0])! = \(returnedValue)")
                 return returnedValue
             }
         }
@@ -417,6 +435,11 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let secondController = segue.destination as! SecondViewController
+        secondController.scrollHistory = history
     }
 
 

@@ -14,6 +14,7 @@
 		F8D33053201BFC34003D91BB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8D33051201BFC34003D91BB /* LaunchScreen.storyboard */; };
 		F8D3305E201BFC34003D91BB /* simplecalc_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D3305D201BFC34003D91BB /* simplecalc_iosTests.swift */; };
 		F8D33069201BFC34003D91BB /* simplecalc_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D33068201BFC34003D91BB /* simplecalc_iosUITests.swift */; };
+		F8D330ED20217225003D91BB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8D330EC20217225003D91BB /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		F8D33064201BFC34003D91BB /* simplecalc-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "simplecalc-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8D33068201BFC34003D91BB /* simplecalc_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simplecalc_iosUITests.swift; sourceTree = "<group>"; };
 		F8D3306A201BFC34003D91BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8D330EC20217225003D91BB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		F8D33047201BFC34003D91BB /* simplecalc-ios */ = {
 			isa = PBXGroup;
 			children = (
+				F8D330EC20217225003D91BB /* SecondViewController.swift */,
 				F8D33048201BFC34003D91BB /* AppDelegate.swift */,
 				F8D3304A201BFC34003D91BB /* ViewController.swift */,
 				F8D3304C201BFC34003D91BB /* Main.storyboard */,
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8D330ED20217225003D91BB /* SecondViewController.swift in Sources */,
 				F8D3304B201BFC34003D91BB /* ViewController.swift in Sources */,
 				F8D33049201BFC34003D91BB /* AppDelegate.swift in Sources */,
 			);
