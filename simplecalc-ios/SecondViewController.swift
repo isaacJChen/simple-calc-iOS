@@ -9,9 +9,13 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
     @IBOutlet weak var scroller: UIScrollView!
+    
     var scrollHistory:[String] = []
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         if scrollHistory.count != 0 {
@@ -21,7 +25,7 @@ class SecondViewController: UIViewController {
                 scroller.addSubview(label)
             }
         }
-
+        scroller.contentSize = CGSize(width:400, height:scrollHistory.count*25 + 70)
 
         // Do any additional setup after loading the view.
     }
